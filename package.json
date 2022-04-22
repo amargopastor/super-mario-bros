@@ -1,0 +1,23 @@
+{
+  "name": "super-mario",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:amargopastor/super-mario.git",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel index.html",
+    "build": "tsc"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "parcel": "^2.5.0",
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
