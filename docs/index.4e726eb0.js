@@ -1,0 +1,2 @@
+class t extends class{constructor(t){this.position=t}draw(t){}}{constructor(t={x:10,y:100},i={w:30,h:15}){super(t),this.marioSize=i,this.marioColor="red"}draw(t){t.fillStyle="red",t.fillRect(this.position.x,this.position.y,this.marioSize.w,this.marioSize.h)}}window.onload=()=>{console.log("ready");const i=document.getElementById("canvas"),o=i.getContext("2d"),e=new t;let s=0;const n=t=>{s=t,o.clearRect(0,0,i.width,i.height),e.draw(o),window.requestAnimationFrame(n)};window.requestAnimationFrame(n)};
+//# sourceMappingURL=index.4e726eb0.js.map

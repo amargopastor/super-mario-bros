@@ -1,16 +1,33 @@
 {
   "name": "super-mario",
   "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:amargopastor/super-mario.git",
+  "description": "Game created with Canvas and Typescript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amargopastor/super-mario-bros.git"
+  },
+  "keywords": [
+    "Super Mario Bros",
+    "Canvas",
+    "Typescript"
+  ],
+  "author": "Marcos Iñigo Corral",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/**/*.ts",
     "dev": "parcel index.html",
-    "build": "tsc"
+    "start": "parcel serve -p $PORT index.html",
+    "build": "npm run clean && npm run ghbuild",
+    "ghbuild": "parcel build --dist-dir docs --public-url /super-mario-bros index.html",
+    "clean": "rimraf docs dist"
   },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amargopastor/super-mario-bros/issues"
+  },
+  "homepage": "https://github.com/amargopastor/super-mario-bros#readme",
   "dependencies": {
     "parcel": "^2.5.0",
+    "rimraf": "^3.0.2",
     "typescript": "^4.6.3"
   },
   "devDependencies": {
