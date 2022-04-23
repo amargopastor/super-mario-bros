@@ -24,6 +24,8 @@ export class Goomba extends Actor {
 		};
 		if (checkLimits(newPos, this.goombaSize, this.goombaColor)) {
 			this.position = newPos;
+		} else {
+			this.position = { x: 500 + this.goombaSize.w, y: 350 };
 		}
 	}
 	draw(delta: number, ctx: CanvasRenderingContext2D) {
