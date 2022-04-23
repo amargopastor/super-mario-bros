@@ -12,8 +12,8 @@ export class Mario extends Actor {
 	keyboardMap: KeyboardMap;
 
 	constructor(
-		initialPos: Point = { x: 10, y: 100 },
-		size: Size = { w: 30, h: 15 }
+		size: Size = { w: 30, h: 30 },
+		initialPos: Point = { x: 10, y: 350 }
 	) {
 		super(initialPos);
 		this.marioSize = size;
@@ -29,12 +29,12 @@ export class Mario extends Actor {
 			x: this.position.x + this.marioSpeed * delta,
 			y: this.position.y,
 		};
-		if (checkLimits(newPos)) {
+		if (checkLimits(newPos, this.marioSize, this.marioColor)) {
 			this.position = newPos;
 		}
 	}
 	draw(delta: number, ctx: CanvasRenderingContext2D) {
-		ctx.fillStyle = 'red';
+		ctx.fillStyle = this.marioColor;
 		ctx.fillRect(
 			this.position.x,
 			this.position.y,
@@ -45,9 +45,9 @@ export class Mario extends Actor {
 	keyboard_event_down(key: string) {
 		let tecla = this.keyboardMap[key];
 		if (tecla == MarioKey.LEFT) {
-			this.marioAceleration = -5;
+			this.marioAceleration = -10;
 		} else if (tecla == MarioKey.RIGHT) {
-			this.marioAceleration = 5;
+			this.marioAceleration = 10;
 		}
 	}
 	keyboard_event_up(key: string) {
