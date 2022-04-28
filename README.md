@@ -44,9 +44,8 @@ The Super-Mario classic game!
 
 | Move  | Player 1 |
 | ----- | -------- |
-| Up    | ⬆        |
+| Jump  | ⬆        |
 | Right | ➡        |
-| Down  | ⬇        |
 | Left  | ⬅        |
 
 ## Project tree
