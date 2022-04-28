@@ -1,5 +1,8 @@
-import { Goomba } from './actors/Goomba';
+import { Actor, IActor } from './actors/Actor';
 import { Mario } from './actors/Mario';
+import { Goomba } from './actors/Goomba';
+import { FPSViewer } from './actors/FPSViewer';
+import { Score } from './actors/Score';
 
 window.onload = () => {
 	console.log('ready');
@@ -9,8 +12,10 @@ window.onload = () => {
 
 	const mario = new Mario();
 	const goomba = new Goomba();
+	const fps = new FPSViewer({ x: 5, y: 15 });
+	const score = new Score();
 
-	const actors = [goomba, mario];
+	const actors: Array<IActor> = [goomba, mario, fps, score];
 
 	let lastFrame = 0;
 	const render = (time: number) => {

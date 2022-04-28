@@ -4,8 +4,8 @@ export interface IActor {
 	position: Point;
 	update: (delta: number) => void;
 	draw: (delta: number, ctx: CanvasRenderingContext2D) => void;
-	key_event_down: (key: string) => void;
-	key_event_up: (key: string) => void;
+	key_event_down?: (key: string) => void;
+	key_event_up?: (key: string) => void;
 }
 
 export class Actor implements IActor {
